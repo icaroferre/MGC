@@ -1,5 +1,7 @@
 #  M▪G▪C▪ - Multi-Channel Grid Control
 
+![MGC Screenshot](/screenshot.jpg?raw=true)
+
 MSG is a Max 8 patch + JS script that lets you control Drum Machines, Samplers, and Synthesizers from your Monome via MIDI CC.  
 Because MSG outputs MIDI CC messages to all active channels, it's capable of controlling multiple tracks on samplers (such as the Elektron Digitakt) at once. 
 It's a great tool for live performance and experimentation.

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 518.0, 49.0, 311.0, 453.0 ],
+		"rect" : [ 510.0, 233.0, 311.0, 453.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -220,7 +220,7 @@
 					"patching_rect" : [ 513.666666666666629, 667.0, 158.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 128.0, 173.85714285714289, 130.0, 20.0 ],
-					"text" : "Digitakt v1.0",
+					"text" : "-",
 					"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 					"textjustification" : 2
 				}
@@ -246,7 +246,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-18",
-					"items" : [ "AU DLS Synth 1", ",", "Driver IAC Driver IAC LCXL", ",", "Driver IAC Arduino 1 (OUT)", ",", "Driver IAC Arduino 2 (IN)", ",", "CVpal", ",", "Digitakt Elektron MIDI", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Driver IAC Driver IAC LCXL", ",", "Driver IAC Arduino 1 (OUT)", ",", "Driver IAC Arduino 2 (IN)", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -353,6 +353,8 @@
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "number",
+					"maximum" : 8,
+					"minimum" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -839,7 +841,7 @@
 			}
 , 			{
 				"name" : "mgc.js",
-				"bootpath" : "~/Dropbox/Work/Programming/MaxMSP/My Patches/Diginome Control",
+				"bootpath" : "~/Dropbox/Work/GitHub/MGC",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
