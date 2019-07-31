@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 745.0, 426.5, 54.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Helvetica Neue Bold",
 					"fontsize" : 10.0,
@@ -220,7 +232,7 @@
 					"patching_rect" : [ 513.666666666666629, 667.0, 158.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 128.0, 173.85714285714289, 130.0, 20.0 ],
-					"text" : "-",
+					"text" : "Digitakt v1.0",
 					"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 					"textjustification" : 2
 				}
@@ -246,7 +258,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-18",
-					"items" : [ "AU DLS Synth 1", ",", "Driver IAC Driver IAC LCXL", ",", "Driver IAC Arduino 1 (OUT)", ",", "Driver IAC Arduino 2 (IN)", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Driver IAC Driver IAC LCXL", ",", "Driver IAC Arduino 1 (OUT)", ",", "Driver IAC Arduino 2 (IN)", ",", "CVpal", ",", "monologue MIDI OUT", ",", "monologue SOUND", ",", "Scarlett 6i6 USB", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -311,11 +323,11 @@
 					"presentation_rect" : [ 66.0, 138.0, 177.0, 25.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.text",
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "live.text",
-							"parameter_mmax" : 1
+							"parameter_type" : 2
 						}
 
 					}
@@ -387,69 +399,84 @@
 						}
 ,
 						"envelope" : 						{
-							"cc" : [ 78, 79, 80 ],
-							"channels" : 8,
-							"default" : 40,
-							"rand" : 1,
-							"40" : [ 0, 127, 30 ],
-							"41" : [ 2, 0, 20 ],
-							"42" : [ 30, 2, 0 ],
-							"43" : [ 20, 127, 10 ]
-						}
-,
-						"tune" : 						{
-							"cc" : 3,
+							"cc" : 4,
 							"channels" : 8,
 							"default" : 18,
 							"rand" : 1,
-							"16" : 48,
-							"17" : 55,
-							"18" : 60,
-							"19" : 72
+							"16" : 0,
+							"17" : 48,
+							"18" : 72,
+							"19" : 100
 						}
 ,
-						"distortion" : 						{
-							"cc" : [ 18, 81 ],
-							"channels" : 8,
-							"default" : 24,
-							"rand" : 24,
-							"24" : [ 0, 0 ],
-							"25" : [ 24, 20 ],
-							"26" : [ 60, 60 ],
-							"27" : [ 100, 80 ]
-						}
-,
-						"play_mode" : 						{
-							"cc" : 17,
+						"tune" : 						{
+							"cc" : 5,
 							"channels" : 8,
 							"default" : 23,
 							"rand" : 1,
 							"20" : 0,
-							"21" : 1,
-							"22" : 2,
-							"23" : 3
+							"21" : 24,
+							"22" : 64,
+							"23" : 100
+						}
+,
+						"distortion" : 						{
+							"cc" : 16,
+							"channels" : 8,
+							"default" : 28,
+							"rand" : 1,
+							"24" : 0,
+							"25" : 52,
+							"26" : 56,
+							"27" : 60,
+							"28" : 64,
+							"29" : 68,
+							"30" : 72,
+							"31" : 80
+						}
+,
+						"play-mode" : 						{
+							"cc" : 78,
+							"channels" : 8,
+							"default" : 32,
+							"rand" : 1,
+							"32" : 0,
+							"33" : 24,
+							"34" : 64,
+							"35" : 100
+						}
+,
+						"effects" : 						{
+							"cc" : 80,
+							"channels" : 8,
+							"default" : 36,
+							"rand" : 1,
+							"36" : 110,
+							"37" : 80,
+							"38" : 40,
+							"39" : 20
 						}
 ,
 						"length" : 						{
-							"cc" : 21,
+							"cc" : 82,
 							"channels" : 8,
-							"default" : 31,
+							"default" : 44,
 							"rand" : 1,
-							"28" : 20,
-							"29" : 40,
-							"30" : 60,
-							"31" : 127
+							"44" : 0,
+							"45" : 45,
+							"46" : 60,
+							"47" : 90
 						}
 ,
 						"volume" : 						{
-							"cc" : 95,
+							"cc" : [ 85, 86, 87, 88, 89, 90, 91, 92 ],
 							"channels" : 8,
-							"default" : 63,
-							"rand" : 0,
-							"60" : 50,
-							"61" : 75,
-							"62" : 100,
-							"63" : 127
+							"default" : 56,
+							"rand" : 1,
+							"56" : [ 23, 0, 64, 40, 32, 60, 75, 110 ],
+							"57" : [ 15, 1, 100, 10, 52, 60, 25, 110 ],
+							"58" : [ 31, 0, 64, 20, 32, 50, 45, 110 ],
+							"59" : [ 3, 0, 64, 50, 70, 40, 15, 110 ]
 						}
 ,
 						"lfo" : 						{
@@ -457,58 +484,14 @@
 							"channels" : 8,
 							"default" : 48,
 							"rand" : 1,
-							"48" : [ 80, 1, 64, 9, 0, 0, 0, 64 ],
-							"49" : [ 80, 2, 64, 9, 0, 0, 0, 80 ],
-							"50" : [ 80, 21, 64, 9, 4, 0, 3, 96 ],
-							"51" : [ 80, 11, 64, 9, 0, 0, 0, 72 ],
-							"52" : [ 65, 1, 64, 12, 6, 0, 2, 72 ],
-							"53" : [ 65, 2, 64, 9, 6, 0, 2, 80 ],
-							"54" : [ 65, 2, 64, 31, 6, 0, 2, 96 ],
-							"55" : [ 65, 2, 64, 18, 6, 0, 2, 96 ]
-						}
-,
-						"filter" : 						{
-							"cc" : [ 74, 75, 76 ],
-							"channels" : 8,
-							"default" : 32,
-							"rand" : 1,
-							"32" : [ 127, 0, 0 ],
-							"33" : [ 60, 40, 1 ],
-							"34" : [ 30, 64, 1 ],
-							"35" : [ 110, 40, 2 ]
-						}
-,
-						"filter-env" : 						{
-							"cc" : [ 70, 71, 72, 73, 77 ],
-							"channels" : 8,
-							"default" : 36,
-							"rand" : 1,
-							"36" : [ 0, 50, 0, 0, 64 ],
-							"37" : [ 15, 30, 0, 0, 74 ],
-							"38" : [ 0, 30, 0, 0, 110 ],
-							"39" : [ 0, 20, 0, 0, 20 ]
-						}
-,
-						"effects" : 						{
-							"cc" : [ 82, 83 ],
-							"channels" : 8,
-							"default" : 44,
-							"rand" : 0,
-							"44" : [ 0, 0 ],
-							"45" : [ 45, 40 ],
-							"46" : [ 60, 80 ],
-							"47" : [ 90, 127 ]
-						}
-,
-						"delay-settings" : 						{
-							"cc" : [ 85, 86, 87, 88, 89, 90, 91, 92 ],
-							"channels" : 8,
-							"default" : 56,
-							"rand" : 0,
-							"56" : [ 23, 0, 64, 40, 32, 60, 75, 110 ],
-							"57" : [ 15, 1, 100, 10, 52, 60, 25, 110 ],
-							"58" : [ 31, 0, 64, 20, 32, 50, 45, 110 ],
-							"59" : [ 3, 0, 64, 50, 70, 40, 15, 110 ]
+							"48" : [ 80, 1, 64, 12, 0, 0, 0, 72 ],
+							"49" : [ 80, 2, 64, 12, 1, 0, 0, 80 ],
+							"50" : [ 80, 3, 64, 12, 2, 0, 0, 96 ],
+							"51" : [ 80, 4, 64, 12, 3, 0, 0, 96 ],
+							"52" : [ 100, 4, 64, 12, 4, 0, 0, 76 ],
+							"53" : [ 120, 2, 64, 12, 5, 0, 0, 80 ],
+							"54" : [ 80, 4, 64, 12, 6, 0, 0, 60 ],
+							"55" : [ 80, 4, 64, 12, 6, 0, 0, 96 ]
 						}
 
 					}
@@ -647,8 +630,7 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"midpoints" : [ 754.5, 463.0, 382.5, 463.0 ],
+					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -800,6 +782,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"midpoints" : [ 754.5, 459.25, 382.5, 459.25 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
